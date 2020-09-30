@@ -41,8 +41,34 @@ struct Provider: TimelineProvider {
 struct WidgetEntryView: View {
     let entry: Provider.Entry
     
+    @Environment(\.widgetFamily) var family
+    
+    @ViewBuilder
     var body: some View {
-        EmojiView(emoji: entry.emoji)
+        switch family {
+        case .systemSmall:
+            EmojiView(emoji: entry.emoji)
+        case .systemMedium:
+            HStack(spacing: 30) {
+                EmojiView(emoji: entry.emoji)
+                
+                Text(entry.emoji.name)
+                    .font(.largeTitle)
+            }
+        default:
+            VStack(spacing: 30) {
+                HStack(spacing: 30) {
+                    EmojiView(emoji: entry.emoji)
+                    
+                    Text(entry.emoji.name)
+                        .font(.largeTitle)
+                }
+                
+                Text(entry.emoji.description)
+                    .font(.title2)
+                    .padding()
+            }
+        }
     }
 }
 
@@ -55,5 +81,6 @@ struct MyWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemLarge, .systemMedium, .systemSmall])
     }
 }
