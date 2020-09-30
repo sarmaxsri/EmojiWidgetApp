@@ -24,6 +24,7 @@
 		79BC0F9725246EC800CA3DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79BC0F9E2524701500CA3DE2 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		79BC0FA12524710500CA3DE2 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		79BC0FA4252472A100CA3DE2 /* EmojiWidgetApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmojiWidgetApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		79BC0F8D25246EC600CA3DE2 /* EmojiWidgetApp */ = {
 			isa = PBXGroup;
 			children = (
+				79BC0FA4252472A100CA3DE2 /* EmojiWidgetApp.entitlements */,
 				79BC0F8E25246EC600CA3DE2 /* EmojiWidgetAppApp.swift */,
 				79BC0F9025246EC600CA3DE2 /* ContentView.swift */,
 				79BC0FA12524710500CA3DE2 /* EmojiView.swift */,
@@ -275,6 +277,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmojiWidgetApp/EmojiWidgetApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"EmojiWidgetApp/Preview Content\"";
 				DEVELOPMENT_TEAM = V2499F3BZ5;
@@ -297,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmojiWidgetApp/EmojiWidgetApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"EmojiWidgetApp/Preview Content\"";
 				DEVELOPMENT_TEAM = V2499F3BZ5;
